@@ -1,4 +1,7 @@
-﻿// int
+﻿// Ctrl + K + C comment
+// Ctrl + K + U uncomment
+
+// int
 // float / double
 // string
 // bool
@@ -56,23 +59,23 @@ for (int i = 0; i < 100; i++)
 
 
 // find max value
-int max(int[] values)
+int max(int[] val)
 {
-    int max = 0;
-    foreach (int i in values)
+    int max1 = 0;
+    foreach (int i in val)
     {
-        if (max < i)
-            max = i;
+        if (max1 < i)
+            max1 = i;
     }
-    for (int ii = 0; ii < values.Length; ii++)
+    for (int ii = 0; ii < val.Length; ii++)
     {
-        if (max == values[ii])
+        if (max1 == val[ii])
         {
-            values[ii] = 0;
+            val[ii] = 0;
             break;
         }
     }
-    return max;
+    return max1;
 }
 
 Console.WriteLine();
@@ -81,3 +84,4 @@ for (int i = 0; i < 100; i++)
 {
     Console.WriteLine(max(values));
 }
+
