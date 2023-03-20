@@ -1,5 +1,5 @@
 ﻿// Generic
-namespace lecture4_console;
+//namespace lecture4_console;
 
 //using Newtonsoft.Json;
 
@@ -24,3 +24,34 @@ namespace lecture4_console;
 // Delegate - event
 // delegate is type-safe pointer towards method(s)
 
+// static property
+using lecture4_console;
+
+var stud1 = new Student();
+var stud2 = new Student();
+var stud3 = new Student();
+
+stud1.Name = "Test";
+
+Console.WriteLine(Student.Count);
+
+void TestFunction(Action action)
+{
+    Console.WriteLine("before action invoke");
+    action();
+    Console.WriteLine("after action invoke");
+}
+
+void Act1()
+{
+    Console.WriteLine("This is the action 1");
+}
+
+void Act2()
+{
+    Console.WriteLine("This is the action 2");
+}
+
+TestFunction(Act1);
+
+TestFunction(Act2);
